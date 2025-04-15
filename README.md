@@ -5,15 +5,15 @@ A C++ project used to create a mad-libs using a linked list (pointers) to store 
 
 1. **Clone the repository** to your local machine.
 ```
-git clone https://github.com/sdekhterman/Snake-Game.git
+git clone https://github.com/sdekhterman/cpp-mad-libs.git
 ```
 3. **Compile the code** using a C++ compiler.
 ```
-g++ -o snake_game main.cpp
+g++ -o mad_libs main.cpp
 ```
 3. **Execute the compiled executable** to start the program.
 ```
-./snake_game.exe
+./mad_libs.exe
 ```
 
 ## TODO: 
