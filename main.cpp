@@ -1,6 +1,14 @@
 #include <iostream>
+#include <numbers>
+#include <iostream>
+#include <iomanip>
+#include <cerrno>
+#include <cfenv>
+#include <cmath>
+#include <cstring>
+#include <math.h>
 using namespace std;
-int main(int argc, char *argv[], char *envp[])
+int main()
 {
     // int value = 42;
     // int* ptr = &value;
@@ -32,7 +40,14 @@ int main(int argc, char *argv[], char *envp[])
     // }
 
     // NULL pointer
-    int *ptr = NULL;
+    // int *ptr = NULL;
+
+    double Population0 = 1.0;
+    double transition  = 0.0;
+    
+    transition = exp(1.0) * Population0;
+    double transition2 = (fmod(transition, 1.0) > 0.5) ? ceil(transition) : transition = floor(transition);
+    std::cout << transition2 << std::endl;
 
     return 0;
 }
