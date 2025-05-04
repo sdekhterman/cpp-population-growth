@@ -1,4 +1,4 @@
-# cpp-mad-libs
+# cpp-population-growth
 A C++ project used to create a mad-libs using a linked list (pointers) to store user responses.
 
 ## How to Run
