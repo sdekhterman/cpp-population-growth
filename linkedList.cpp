@@ -21,30 +21,23 @@ public:
         current->next = newNode;
     }
 
-    // Insert at the beginning
-    void prepend(int val) {
-        Node* newNode = new Node(val);
-        newNode->next = head;
-        head = newNode;
-    }
-
     // Delete a node with a specific value
     void deleteNode(int val) {
         if (!head) return;
-        if (head->data == val) {
-            Node* temp = head;
-            head = head->next;
-            delete temp;
-            return;
-        }
+
         Node* current = head;
-        while (current->next && current->next->data != val) {
-            current = current->next;
+        if(head->data != val){
+            while (current->next && current->next->data != val) {
+                current = current->next;
+            }
         }
-        if (current->next) {
-            Node* temp = current->next;
-            current->next = current->next->next;
-            delete temp;
+        Node* currentDelete = current->next;
+        current->next = nullptr;
+
+        while (currentDelete) {
+            Node* next = currentDelete->next;
+            delete currentDelete;
+            currentDelete = next;
         }
     }
 
@@ -70,9 +63,9 @@ public:
 
 int main() {
     LinkedList list;
+    list.append(0);
     list.append(1);
     list.append(2);
-    list.prepend(0);
     list.printList(); // Output: 0 1 2
     list.deleteNode(1);
     list.printList(); // Output: 0 2
