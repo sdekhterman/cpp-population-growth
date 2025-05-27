@@ -1,4 +1,4 @@
-#include <iostream>
+
 
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
@@ -16,14 +16,13 @@ struct Node {
 // Linked list class
 class LinkedList {
 public:
+    Node* head;
+    
     // constructor
     LinkedList();
 
     // Insert at the end
     void append(int val);
-
-    // Insert at the beginning
-    void prepend(int val);
 
     // Delete a node with a specific value
     void deleteNode(int val);
