@@ -1,14 +1,6 @@
 #include <iostream>
-// #include <numbers>
-// #include <iostream>
-// #include <iomanip>
-// #include <cerrno>
-// #include <cfenv>
-// #include <cmath>
-// #include <cstring>
 #include <math.h>
-// #include <conio.h> 
-// #include <stdlib.h> 
+#include "linkedList.h"
 
 using namespace std;
 int main()
